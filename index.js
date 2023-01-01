@@ -1,11 +1,22 @@
 const express = require("express");
 
+//import DBconnection File
+const DBconnection = require("./DatabaseConnection");
+
+//import DB
+const dotenv = require("dotenv");
+
 
 //import routes
 const usersRouter= require("./routes/users");
 const booksRouter = require("./routes/books");
 
+
+dotenv.config();
+
 const app = express();
+
+DBconnection();
 
 const PORT = 8081;
 
@@ -21,7 +32,7 @@ app.get("/", (req,res) =>{
     });
 });
 
-// http://localhost:8081/users/users
+// http://localhost:8081/users/
 app.use("/users", usersRouter);
 app.use("/users",booksRouter);
 
