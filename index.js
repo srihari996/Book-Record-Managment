@@ -34,7 +34,7 @@ app.get("/", (req,res) =>{
 
 // http://localhost:8081/users/
 app.use("/users", usersRouter);
-app.use("/users",booksRouter);
+app.use("/books",booksRouter);
 
 
 app.get("*", (req, res) => {
