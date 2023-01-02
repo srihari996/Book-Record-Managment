@@ -39,7 +39,7 @@ exports.getSingleBookById = async (req, res) => {
     if (issuedBooks.length === 0)
       return res
         .status(404)
-        .json({ success: false, message: "No booke has been issued" });
+        .json({ success: false, message: "No book has been issued" });
   
     return res.status(200).json({ success: true, data: issuedBooks });
   };

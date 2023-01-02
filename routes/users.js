@@ -9,7 +9,7 @@ const {
   updateUserById,
   createNewUser,
   getSubscriptionDetailsById,
-} = require("../controllers/user controller");
+} = require("../controllers/user-controller");
 
 const router = express.Router();
 
